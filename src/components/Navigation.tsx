@@ -53,13 +53,13 @@ export function Navigation() {
     <motion.nav
       initial={"closed"}
       animate={isDisplayed ? "opened" : "closed"}
-      className="w-full h-fit overflow-hidden p-2 bg-transparent border-b-2 border-slate-400 mb-2">
+      className="w-full h-fit overflow-hidden p-2 bg-transparent border-b-2 border-slate-300 mb-2 bg-slate-800">
       <motion.button variants={hideNavItemsVariant} className="p-4" onClick={() => setIsDisplayed(true)}>
-        <RxHamburgerMenu size={25} color={Colors.neutral[100]} />
+        <RxHamburgerMenu size={25} color={Colors.neutral[900]} strokeWidth={0.5} />
       </motion.button>
       <motion.div
         variants={mobileMenuVariant}
-        className="w-full h-screen z-50 overflow-hidden top-0 left-0 bg-black absolute flex flex-col gap-8 justify-start"
+        className="w-full h-screen z-50 overflow-hidden top-0 left-0 bg-slate-900 absolute flex flex-col gap-8 justify-start"
       >
         <motion.button variants={fadeInVariant} className="md:justify-self-end w-fit md:mx-0 md:ml-auto mx-auto h-fit p-4 flex flex-row items-center content-center justify-center gap-2" onClick={() => setIsDisplayed(false)}>
           <RxCross1 size={29} color={Colors.slate[100]} />
